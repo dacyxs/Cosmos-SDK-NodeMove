@@ -1,0 +1,13 @@
+STFP programı (winscp - cyberduck) ile bağlanıp /root/.clan/config dosyası altındaki priv_validator_key.json dosyasını kendi ana makinemize kaydediyoruz. 
+<br>
+Burada dikkat edilmesi gereken husus tüm cosmos larda . ile başlayan dosyanın altında config dosyası aramamız gerektiği.
+<br>
+Kurulum yapacağımız sunucuya bağlanarak cüzdan recover komutuyla eski cüzdanımızı kurtarırız. Komutu girdikten sonra mnemonic keyleri gireriz. Ve cüzdan bilgilerimiz tekrar gelir.
+<br>
+cland keys add <key-name> --recover
+<br>
+Son olarak diğer makinede node kurulumunu tekrar yaptıktan sonra bilgisayarımıza kaydettiğimiz priv_validator_key dosyasını sunucudaki ile değiştiririz ve tekrar başlatırız. Taşıma işlemi başarıyla gerçekleşir !
+<br>
+systemctl restart cland
+<br>
+Ref: https://forum.rues.info/index.php?threads/cosmos-sdk-kullanan-projelerde-node-tasima-islemi.1027/#post-4164
